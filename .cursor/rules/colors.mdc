@@ -1,0 +1,42 @@
+---
+description: Only use color variables from globals.css
+globs: **/*.{tsx,css}
+alwaysApply: false
+---
+
+# Colors
+
+Only use the color variables defined in `app/globals.css`. Never use raw hex, rgb, hsl values, or arbitrary Tailwind color classes (e.g. `text-blue-500`, `bg-[#1D4ED8]`).
+
+## Available colors
+
+| Variable | Tailwind class | Use for |
+|---|---|---|
+| `--background` | `bg-background` / `text-background` | Page background |
+| `--text` | `text-text` | Body text |
+| `--primary` | `bg-primary` / `text-primary` | Primary actions, links |
+| `--accent` | `bg-accent` / `text-accent` | Highlights, badges |
+| `--secondary` | `bg-secondary` / `text-secondary` | Subtle backgrounds |
+| `--hover` | `bg-hover` / `text-hover` | Hover states |
+
+## Examples
+
+```tsx
+// ✅ GOOD
+<button className="bg-primary text-background hover:bg-hover">Click</button>
+<p className="text-text">Hello</p>
+
+// ❌ BAD — raw color value
+<button className="bg-[#1D4ED8] text-white">Click</button>
+<p className="text-slate-800">Hello</p>
+```
+
+```css
+/* ✅ GOOD */
+color: var(--text);
+background: var(--primary);
+
+/* ❌ BAD */
+color: #1E293B;
+background: #1D4ED8;
+```

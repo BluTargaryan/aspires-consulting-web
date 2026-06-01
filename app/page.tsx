@@ -1,7 +1,9 @@
-import Image from "next/image";
+import Hero from "./components/sections/Hero";
 
 export default function Home() {
   return (
-    <div></div>
+    <main className="flex-1 px-4">
+      <Hero />
+    </main>
   );
 }
