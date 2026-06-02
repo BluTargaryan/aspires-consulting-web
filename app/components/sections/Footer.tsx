@@ -27,8 +27,8 @@ const socials = [
 ]
 
 const legal = [
-  { label: 'Privacy Policy', href: '#' },
-  { label: 'Terms of use',   href: '#' },
+  { label: 'Privacy Policy', href: '/privacy-policy' },
+  { label: 'Terms of use',   href: '/terms-of-use' },
 ]
 
 const Footer = () => {
