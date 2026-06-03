@@ -15,15 +15,14 @@ const quickLinks = [
 ]
 
 const contacts = [
-  { label: 'email@email.com', href: 'mailto:email@email.com' },
-  { label: '+44 807 444 5555', href: 'tel:+448074445555' },
-  { label: 'CV3 333, Northweltshire, United Kingdom', href: '#' },
+  { label: 'aspiresconsultingservices@gmail.com', href: 'mailto:aspiresconsultingservices@gmail.com' },
+  { label: '+447824029823', href: 'tel:+447824029823' },
+  { label: 'Coventry, England, United Kingdom', href: 'https://www.google.com/maps/search/?api=1&query=Coventry,+England,+United+Kingdom' },
 ]
 
 const socials = [
-  { icon: CiLinkedin,  href: '#', label: 'LinkedIn' },
-  { icon: CiYoutube,   href: '#', label: 'YouTube' },
-  { icon: CiInstagram, href: '#', label: 'Instagram' },
+  { icon: CiLinkedin,  href: 'https://www.linkedin.com/company/aspires-consulting-services', label: 'LinkedIn' },
+  { icon: CiYoutube,   href: 'https://www.youtube.com/@AspiresConsultingServices', label: 'YouTube' },
 ]
 
 const legal = [
@@ -61,7 +60,7 @@ const Footer = () => {
           <h3 className="font-bold text-lg">Contacts</h3>
           <ul className="flex flex-col items-center gap-3">
             {contacts.map(({ label, href }) => (
-              <li key={label}><a href={href} className="hover:text-hover transition-colors text-center block">{label}</a></li>
+              <li key={label}><a href={href} target="_blank" className="hover:text-hover transition-colors text-center block">{label}</a></li>
             ))}
           </ul>
         </div>
@@ -71,7 +70,7 @@ const Footer = () => {
           <h3 className="font-bold text-lg">Socials</h3>
           <div className="flex items-center gap-6">
             {socials.map(({ icon: Icon, href, label }) => (
-              <a key={label} href={href} aria-label={label} className="text-2xl hover:text-hover transition-colors">
+              <a key={label} href={href} target="_blank" aria-label={label} className="text-2xl hover:text-hover transition-colors">
                 <Icon />
               </a>
             ))}
