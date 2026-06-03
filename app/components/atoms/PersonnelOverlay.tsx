@@ -3,7 +3,8 @@
 import React, { useEffect } from 'react'
 import FramedImageClickable from './FramedImageClickable'
 import Button from './Button'
-import { CiLinkedin } from 'react-icons/ci'
+import { CiLinkedin, CiMail } from 'react-icons/ci'
+import { FaYoutube, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 import { MdClose } from 'react-icons/md'
 import FramedImage from './FramedImage'
 
@@ -17,15 +18,27 @@ type PersonnelOverlayProps = {
   name: string
   consultationFee: string
   bio: string
+  services: string
   paymentDetails: {
     bank: string
     accountNo: string
+    sortCode: string
   }
   socials: SocialLink[]
   onClose: () => void
 }
 
-const PersonnelOverlay = ({ image, name, consultationFee, bio, paymentDetails, socials, onClose }: PersonnelOverlayProps) => {
+const socialIcon = (label: string) => {
+  switch (label.toLowerCase()) {
+    case 'youtube':   return <FaYoutube />
+    case 'instagram': return <FaInstagram />
+    case 'whatsapp':  return <FaWhatsapp />
+    case 'email':     return <CiMail />
+    default:          return <CiLinkedin />
+  }
+}
+
+const PersonnelOverlay = ({ image, name, consultationFee, bio, services, paymentDetails, socials, onClose }: PersonnelOverlayProps) => {
   useEffect(() => {
     document.body.style.overflow = 'hidden'
     return () => { document.body.style.overflow = '' }
@@ -61,11 +74,19 @@ const PersonnelOverlay = ({ image, name, consultationFee, bio, paymentDetails, s
 
           <p>{bio}</p>
 
+          {services && services !== '' && (
+            <div className="flex flex-col gap-1 px-5 py-4 border-radius-card bg-secondary">
+              <span className="font-bold">Services</span>
+              <p>{services}</p>
+            </div>
+          )}
+
           <div className="flex items-start justify-between px-5 py-4 gap-4 border-radius-card bg-secondary">
             <span className="shrink-0">Payment details</span>
             <div className="flex flex-col font-bold">
               <span>BANK: {paymentDetails.bank}</span>
               <span>ACCT NO: {paymentDetails.accountNo}</span>
+              <span>SORT CODE: {paymentDetails.sortCode}</span>
             </div>
           </div>
 
@@ -76,7 +97,7 @@ const PersonnelOverlay = ({ image, name, consultationFee, bio, paymentDetails, s
                 text={label}
                 onClick={() => window.open(url, '_blank')}
                 className="w-full bg-text text-background hover:text-text hover:bg-hover hover:border hover:border-text"
-                icon={<CiLinkedin />}
+                icon={socialIcon(label)}
               />
             ))}
           </div>

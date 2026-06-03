@@ -6,8 +6,8 @@ const FramedImageClickable = ({ image, alt, className, imageClassName, onClick }
   
   const MARQUEE_TEXT = Array(20).fill('ASPIRES').join('')
     return (
-   <button className={`flex flex-col border-radius-card overflow-hidden bg-text group ${className}`} onClick={onClick}>
-     <div className={`relative border-radius-card overflow-hidden ${imageClassName}`}>
+   <button className={`flex flex-col overflow-hidden bg-text group border-radius-card border-0 ${className}`} onClick={onClick}>
+     <div className={`relative ${imageClassName}`}>
         <Image src={image} alt={alt} width={1000} height={1000} className={`w-full h-full object-cover ${imageClassName}`} />
         <span className="absolute -top-1.5 left-1/2 -translate-x-1/2 text-3xl text-background font-bold tracking-widest leading-none whitespace-nowrap overflow-hidden">
           {MARQUEE_TEXT}
