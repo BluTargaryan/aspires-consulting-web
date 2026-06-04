@@ -51,7 +51,7 @@ const PersonnelOverlay = ({ image, name, consultationFee, bio, services, payment
       aria-modal="true"
     >
       <div className="flex flex-col gap-6 px-4 py-6 w-[400px] mx-auto
-      md:w-full md:mx-0
+      md:w-full md:mx-0 md:px-10
       ">
 
         <button
