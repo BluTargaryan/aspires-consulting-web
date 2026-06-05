@@ -28,16 +28,18 @@ const WhatWeDo = () => {
   return (
     <section className="w-full py-20 flex flex-col gap-20 items-center
     md:items-start md:gap-25
+    xl:w-[1154px] xl:mx-auto xl:gap-32
     " id="services">
 <h1>What we do</h1>
 
 <ul className="grid grid-cols-1  gap-16 w-[270px]
 md:grid-cols-2 md:w-full md:gap-20
+xl:grid-cols-3 
 ">
   {whatWeDo.map(({ heading, content, image }, i) => (
-    <li key={i} className="flex flex-col gap-8">
-      <FramedImage image={image} alt={heading} className="w-full h-[320px]" />
-      <div className="flex flex-col gap-3 text-center">
+    <li key={i} className="flex flex-col gap-8 xl:gap-10">
+      <FramedImage image={image} alt={heading} className="w-full h-[320px] xl:h-[450px]" />
+      <div className="flex flex-col gap-3 text-center xl:text-left">
         <h2>{heading}</h2>
         <p>{content}</p>
       </div>

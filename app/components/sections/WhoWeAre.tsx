@@ -29,7 +29,7 @@ const WhoWeAre = () => {
   return (
     <section className="w-full py-20 flex flex-col gap-12 items-center
     md:items-start
-    xl:w-[1154px] xl:mx-auto xl:gap-20
+    xl:w-[1154px] xl:mx-auto xl:gap-25
     " id="about" onClick={() => setActive(null)}>
 <h1>Who we are</h1>
 
