@@ -1,6 +1,4 @@
 import React from 'react'
-import { MdArrowRight } from 'react-icons/md'
-import Button from '@/app/components/atoms/Button'
 import HeroButtonSection from './HeroButtonSection'
 import FramedImage from '../atoms/FramedImage'
 

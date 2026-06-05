@@ -1,6 +1,4 @@
 import React from 'react'
-import FramedImage from '../atoms/FramedImage'
-import FramedImageClickable from '../atoms/FramedImageClickable'
 import PersonnelList from './PersonnelList'
 
 const KeyPersonnel = () => {

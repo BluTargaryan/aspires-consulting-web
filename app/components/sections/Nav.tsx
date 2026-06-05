@@ -51,7 +51,7 @@ const Nav = () => {
 
         {open && (
           <div className="absolute right-0 top-full mt-2 w-56 px-3 py-5 flex flex-col gap-3 bg-text rounded-sm overflow-hidden shadow-lg">
-            {navLinks.map(({ label, href, icon: Icon }, i) => (
+            {navLinks.map(({ label, href, icon: Icon }) => (
               <Link
                 key={href}
                 href={href}

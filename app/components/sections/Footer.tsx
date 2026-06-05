@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import iconWhite from '@/app/images/iconWhite.png'
-import { CiLinkedin, CiYoutube, CiInstagram } from 'react-icons/ci'
+import { CiLinkedin, CiYoutube } from 'react-icons/ci'
 
 const MARQUEE_TEXT = Array(20).fill('ASPIRES').join('')
 

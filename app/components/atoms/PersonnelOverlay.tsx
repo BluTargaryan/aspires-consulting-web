@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect } from 'react'
-import FramedImageClickable from './FramedImageClickable'
 import Button from './Button'
 import { CiLinkedin, CiMail } from 'react-icons/ci'
 import { FaYoutube, FaInstagram, FaWhatsapp } from 'react-icons/fa'
