@@ -32,7 +32,7 @@ const legal = [
 
 const Footer = () => {
   return (
-    <footer className="w-full flex flex-col items-center">
+    <footer className="w-full flex flex-col items-center overflow-x-hidden">
       <span className="text-6xl text-text font-bold tracking-widest leading-none whitespace-nowrap overflow-hidden block -mb-3">
         {MARQUEE_TEXT}
       </span>
