@@ -48,7 +48,8 @@ const Footer = () => {
           <span className="text-center md:text-left">Connecting you with the expertise that moves you forward.</span>
         </div>
 
-<div className="w-full flex flex-col gap-12 flex-wrap md:flex-row">
+<div className="w-full flex flex-col gap-12 flex-wrap 
+md:flex-row">
           {/* Quick Links */}
           <div className="flex flex-col items-center gap-4 md:items-start md:w-36">
           <h3 className="font-bold text-xl">Quick Links</h3>
@@ -92,7 +93,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <span className="text-center self-end md:text-left">Created by <a href="https://peaceakoja-portfolio-v2.vercel.app/" target="_blank" className="underline hover:text-hover transition-colors">Peace Akoja</a>. All rights reserved.</span>
+        <span className="text-center  md:text-left xl:self-end">Created by <a href="https://peaceakoja-portfolio-v2.vercel.app/" target="_blank" className="underline hover:text-hover transition-colors">Peace Akoja</a>. All rights reserved.</span>
 
 </div>
       </section>
