@@ -38,7 +38,7 @@ const Footer = () => {
       </span>
 
       <section className="w-full flex flex-col gap-12 py-12 px-4 bg-text text-background justify-center
-      md:flex-row
+      md:flex-row md:px-10
       xl:px-9 xl:py-16 xl:gap-36
       ">
 
