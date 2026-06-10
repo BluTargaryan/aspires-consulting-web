@@ -11,7 +11,7 @@ const Hero = () => {
 <div className="flex flex-col gap-5
 md:w-full xl:gap-8
 ">
-<h1 className="text-primary">Find the Right Expert. <br/>Get the Right Advice.</h1>
+<h1 className="text-text">Find the Right Expert. <br/>Get the Right Advice.</h1>
 
 <div className="flex flex-col gap-3 xl:gap-6">
 <p>Aspires connects you with vetted professionals across every field, so you can access credible expertise, make informed decisions, and move forward with confidence.</p>

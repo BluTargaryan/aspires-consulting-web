@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react'
-import icon from '@/app/images/icon.png'
+import iconWhite from '@/app/images/iconWhite.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import { MdMenu, MdClose, MdGroups, MdWork, MdBadge, MdPersonAdd } from "react-icons/md"
@@ -28,7 +28,7 @@ const Nav = () => {
   }, [])
 
   return (
-    <nav className="flex items-center justify-between p-4 bg-background drop-shadow-sm sticky top-0 left-0 right-0 z-50
+    <nav className="flex items-center justify-between p-4 bg-text text-background sticky top-0 left-0 right-0 z-50
     md:px-10
     xl:py-6
     ">
@@ -36,13 +36,13 @@ const Nav = () => {
       xl:w-[1154px] xl:mx-auto
       ">
       <Link href="/">
-        <Image src={icon} alt="Logo" width={500} height={500} className="h-6 w-auto xl:h-11" />
+        <Image src={iconWhite} alt="Logo" width={500} height={500} className="h-6 w-auto xl:h-11" />
       </Link>
 
       <div className="relative md:hidden" ref={menuRef}>
         <button
           onClick={() => setOpen((prev) => !prev)}
-          className="text-2xl text-text hover:text-hover transition-colors"
+          className="text-2xl text-background hover:text-hover transition-colors"
           aria-label="Toggle menu"
           aria-expanded={open}
         >
@@ -50,7 +50,7 @@ const Nav = () => {
         </button>
 
         {open && (
-          <div className="absolute right-0 top-full mt-2 w-56 px-3 py-5 flex flex-col gap-3 bg-text rounded-sm overflow-hidden shadow-lg">
+          <div className="absolute right-0 top-full mt-8 w-56 px-3 py-5 flex flex-col gap-3 bg-text rounded-sm overflow-hidden shadow-lg">
             {navLinks.map(({ label, href, icon: Icon }) => (
               <Link
                 key={href}
