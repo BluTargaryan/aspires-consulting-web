@@ -77,7 +77,7 @@ export async function getPersonnel(): Promise<PersonnelRow[]> {
 
   let text: string
   try {
-    const res = await fetch(SHEET_URL, { next: { revalidate: 3600 } })
+    const res = await fetch(SHEET_URL, { next: { revalidate: 60 } })
     if (!res.ok) {
       console.error(`Failed to fetch personnel sheet: ${res.status} ${res.statusText}`)
       return []
